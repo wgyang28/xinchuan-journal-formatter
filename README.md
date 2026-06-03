@@ -28,13 +28,23 @@
 
 ## 安装
 
+**第一步：克隆仓库**
+
 ```bash
-# 克隆仓库
 git clone https://github.com/wgyang28/xinchuan-journal-formatter.git
 cd xinchuan-journal-formatter
 ```
 
-然后进入所需期刊的子目录，按其 `README.md` 的说明安装对应 skill。
+**第二步：安装所需期刊的 Skill**
+
+按需选择，每本期刊独立安装：
+
+```bash
+# 《新闻与传播研究》
+ln -s "$(pwd)/xwycbyj-formatter" ~/.claude/skills/xwycbyj-formatter
+```
+
+> 符号链接方式推荐：仓库执行 `git pull` 后，本地 skill 自动同步最新版本，无需重新复制。
 
 ## 新增期刊
 
