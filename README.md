@@ -1,4 +1,4 @@
-# 学术期刊投稿格式 Claude Code Skills
+# 新闻传播学中文学术期刊投稿格式 Claude Code Skills
 
 一组 Claude Code Skills，每个子目录对应一本期刊，将论文 `.docx` 自动调整为该刊投稿格式。
 
