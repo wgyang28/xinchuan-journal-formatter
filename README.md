@@ -4,9 +4,9 @@
 
 ## 包含的期刊
 
-| 目录 | 期刊 | 主要功能 |
-|------|------|----------|
-| [`xwycbyj-formatter/`](./xwycbyj-formatter/) | 《新闻与传播研究》 | 脚注体例统一、括注/APA/MLA/GB → 本刊格式、版面字体标题、修改报告 |
+| 封面 | 目录 | 期刊 | 主要功能 |
+|------|------|------|----------|
+| <img src="assets/xwycbyj-cover.jpg" width="60"> | [`xwycbyj-formatter/`](./xwycbyj-formatter/) | 《新闻与传播研究》 | 脚注体例统一、括注/APA/MLA/GB → 本刊格式、版面字体标题、修改报告 |
 
 ## 工作原理
 
