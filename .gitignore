@@ -1,0 +1,12 @@
+# Python 编译缓存
+**/__pycache__/
+*.pyc
+*.pyo
+
+# 脚本产出文件（避免意外提交稿件内容）
+*_新传研究投稿版.docx
+*_投稿版.docx
+*_修改报告.md
+
+# macOS
+.DS_Store

@@ -1,0 +1,58 @@
+{
+  "_说明": "《新闻与传播研究》投稿稿排版参数。期刊改版时只改本文件，脚本 apply_format.py 运行时读取，不写死进代码。来稿格式规范仅硬性规定『每页38行×每行41字＋标题序号体系＋脚注①每页重排＋正文匿名』；以下字体字号为投稿稿通行约定值（范文系已排版发表版，非硬性要求），可按需修改。",
+
+  "page": {
+    "width_cm": 21.0,
+    "height_cm": 29.7,
+    "margin_top_cm": 2.54,
+    "margin_bottom_cm": 2.54,
+    "margin_left_cm": 3.17,
+    "margin_right_cm": 3.17,
+    "_目标": "版心宽14.66cm + 字号10.5pt → 约每行41字；行距固定15.6pt → 约每页38行"
+  },
+
+  "body": {
+    "font_eastasia": "宋体",
+    "font_latin": "Times New Roman",
+    "size_pt": 10.5,
+    "_size_名": "五号",
+    "line_spacing_exact_pt": 15.6,
+    "first_line_indent_chars": 2,
+    "space_before_pt": 0,
+    "space_after_pt": 0
+  },
+
+  "headings": {
+    "h1": {"prefix_regex": "^[一二三四五六七八九十]+、", "font_eastasia": "黑体", "size_pt": 12.0, "_名": "小四", "bold": false},
+    "h2": {"prefix_regex": "^（[一二三四五六七八九十]+）", "font_eastasia": "黑体", "size_pt": 10.5, "_名": "五号", "bold": false},
+    "h3": {"prefix_regex": "^[1-9]\\d*[．.]", "font_eastasia": "黑体", "size_pt": 10.5, "_名": "五号", "bold": false, "_注": "全角顿点 1． ；含汉字守卫排除表格小数"},
+    "h4": {"prefix_regex": "^（\\d+）", "font_eastasia": "黑体", "size_pt": 10.5, "_名": "五号", "bold": false}
+  },
+
+  "footnote": {
+    "font_eastasia": "宋体",
+    "font_latin": "Times New Roman",
+    "size_pt": 9.0,
+    "_size_名": "小五",
+    "space_before_pt": 0,
+    "space_after_pt": 0,
+    "line_spacing": "single",
+    "_line_spacing_说明": "single=单倍行距",
+    "num_fmt": "decimalEnclosedCircle",
+    "num_restart": "eachPage",
+    "_num_说明": "①②③ 每页独立排序；WPS 部分版本对 decimalEnclosedCircle 兼容性差，可能需手动在 WPS 中重设"
+  },
+
+  "front_matter": {
+    "title_main":    {"font_eastasia": "黑体", "size_pt": 16.0, "_名": "三号", "align": "center"},
+    "title_sub":     {"font_eastasia": "楷体", "size_pt": 14.0, "_名": "四号", "align": "center", "_说明": "副标题以『——』破折号起首"},
+    "author":        {"font_eastasia": "仿宋", "size_pt": 12.0, "_名": "小四", "align": "center", "_匿名": "投稿稿需删除作者姓名/单位"},
+    "abstract_label": "内容提要",
+    "abstract_body": {"font_eastasia": "宋体", "size_pt": 9.0, "_名": "小五"},
+    "keywords_label": "关　键　词",
+    "_中图分类号": "本刊不使用，跳过",
+    "_英文": "英文标题/作者/摘要/关键词在期刊末尾统一编排，不在正文内；投稿时通常需另附。缺失则在报告中提醒，不自动生成。"
+  },
+
+  "checklist_source": "references/新闻与传播研究_格式与注释规范.md 末尾『本 skill 处理时的关键检查清单』"
+}
