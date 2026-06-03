@@ -10,6 +10,11 @@
 | `gjxwj-formatter/` | 《国际新闻界》 | 🚧 开发中 | — |
 | `xwdx-formatter/` | 《新闻大学》 | 🚧 开发中 | — |
 | `xdcb-formatter/` | 《现代传播》 | 🚧 开发中 | — |
+| `xwjz-formatter/` | 《新闻记者》 | 🚧 开发中 | — |
+| `cmgc-formatter/` | 《传媒观察》 | 🚧 开发中 | — |
+| `xwycbpl-formatter/` | 《新闻与传播评论》 | 🚧 开发中 | — |
+| `xwj-formatter/` | 《新闻界》 | 🚧 开发中 | — |
+| `qqcmxk-formatter/` | 《全球传媒学刊》 | 🚧 开发中 | — |
 
 各期刊的安装方法与触发词详见各子目录的 `README.md`。
 
