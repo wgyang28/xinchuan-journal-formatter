@@ -6,7 +6,7 @@
 
 | 目录 | 期刊 | 状态 | 主要功能 |
 |------|------|------|----------|
-| [`xwycbyj-formatter/`](./xwycbyj-formatter/) | 《新闻与传播研究》 | ✅ 可用 | 脚注体例统一、括注/APA/MLA/GB → 本刊格式、版面字体标题、修改报告 |
+| [`xwycbyj-formatter/`](./xwycbyj-formatter/) | 《新闻与传播研究》 | ✅ 可用 | 引文格式统一、版面排版、修改报告 |
 | `gjxwj-formatter/` | 《国际新闻界》 | 🚧 开发中 | — |
 | `xwdx-formatter/` | 《新闻大学》 | 🚧 开发中 | — |
 | `xdcb-formatter/` | 《现代传播》 | 🚧 开发中 | — |
