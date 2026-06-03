@@ -15,6 +15,9 @@
 | `xwycbpl-formatter/` | 《新闻与传播评论》 | 🚧 开发中 | — |
 | `xwj-formatter/` | 《新闻界》 | 🚧 开发中 | — |
 | `qqcmxk-formatter/` | 《全球传媒学刊》 | 🚧 开发中 | — |
+| `xwyxz-formatter/` | 《新闻与写作》 | 🚧 开发中 | — |
+| `bjzy-formatter/` | 《编辑之友》 | 🚧 开发中 | — |
+| `ddcb-formatter/` | 《当代传播》 | 🚧 开发中 | — |
 
 各期刊的安装方法与触发词详见各子目录的 `README.md`。
 
