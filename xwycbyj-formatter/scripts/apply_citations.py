@@ -70,6 +70,9 @@ def run(docx):
         if action == "keep_flag":
             log["intext"].append({"para": idx, "cite": cite, "action": "保留待复核"})
             continue
+        if action == "keep":
+            log["intext"].append({"para": idx, "cite": cite, "action": "保留括注"})
+            continue
         p = get_para(idx, cite)
         if p is None:
             log["warnings"].append("找不到括注：P%d %s" % (idx, cite))
@@ -122,7 +125,8 @@ def print_summary(log):
     n_del = sum(1 for x in log["intext"] if x["action"] == "删除括注")
     n_to = sum(1 for x in log["intext"] if x["action"] == "转脚注")
     n_keep = sum(1 for x in log["intext"] if x["action"] == "保留待复核")
-    print("  括注删除 %d | 转脚注 %d | 保留待复核 %d" % (n_del, n_to, n_keep))
+    n_keep_note = sum(1 for x in log["intext"] if x["action"] == "保留括注")
+    print("  括注删除 %d | 转脚注 %d | 保留括注 %d | 保留待复核 %d" % (n_del, n_to, n_keep_note, n_keep))
     print("脚注序号移到句末标点之前：%d 处" % log.get("fnref_punct_moved", 0))
     print("完整性：脚注 %d→%d，正文引用 %d→%d，断号=%s"
           % (before["footnote_count"], after["footnote_count"],

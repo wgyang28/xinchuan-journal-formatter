@@ -42,10 +42,11 @@ def write_report(report_path, fmt, cit, flags):
     n_del = sum(1 for x in intext if x["action"] == "删除括注")
     n_to = sum(1 for x in intext if x["action"] == "转脚注")
     n_keep = sum(1 for x in intext if x["action"] == "保留待复核")
+    n_keep_note = sum(1 for x in intext if x["action"] == "保留括注")
     L.append("## 二、引文统一\n")
     L.append(f"- 改写脚注 **{n_ref}** 条（APA / MLA / GB-T7714 / Vancouver / 中文混排 → 新传研究脚注体例；外文题名已置斜体）。")
     L.append(f"- 删除空脚注：{cit.get('deleted_fn') or '无'}。")
-    L.append(f"- 正文括注处理 **{len(intext)}** 处：删除（与脚注重复）**{n_del}**，转为脚注 **{n_to}**，保留待复核 **{n_keep}**。")
+    L.append(f"- 正文括注处理 **{len(intext)}** 处：删除（与脚注重复）**{n_del}**，转为脚注 **{n_to}**，保留说明性括注 **{n_keep_note}**，保留待复核 **{n_keep}**。")
     L.append("- 含页码的括注（如 `:60`、`:89`），页码已搬入对应脚注。")
     L.append(f"- 脚注序号位置：将 **{cit.get('fnref_punct_moved', 0)}** 处位于句末标点之后的序号移到标点之前"
              "（规范：序号置于标点之前，如 `……研究①。`）。\n")
@@ -69,6 +70,11 @@ def write_report(report_path, fmt, cit, flags):
     L.append("### 2.3 已删除的重复括注\n")
     dels = [x for x in intext if x["action"] == "删除括注"]
     L.append("，".join(f"P{x['para']}{x['cite']}" for x in dels) or "（无）")
+    L.append("")
+
+    L.append("### 2.4 保留的说明性括注（田野/访谈等）\n")
+    keeps_note = [x for x in intext if x["action"] == "保留括注"]
+    L.append("，".join(f"P{x['para']}{x['cite']}" for x in keeps_note) or "（无）")
     L.append("")
 
     # 3. 完整性

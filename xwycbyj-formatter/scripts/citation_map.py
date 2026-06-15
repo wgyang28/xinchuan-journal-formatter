@@ -42,7 +42,7 @@ FOOTNOTE_TARGETS = {
     4: [("〔美〕约翰·杜威：《经验与自然》，傅统先译，北京：商务印书馆，2019年，第30页。", False)],
 
     # 示例④：外文期刊析出（姓前名后，篇名英文引号，刊名斜体，无具体页码则去页码）
-    5: [("Wang, Ming, "Digital Memory and Cultural Identity," ", False),
+    5: [("Wang, Ming, \"Digital Memory and Cultural Identity,\" ", False),
         ("Journal of Communication", True),
         (", vol. 70, no. 2, 2021, pp. 110-130.", False)],
 
@@ -59,12 +59,14 @@ DELETE_FN = []
 # action 取值：
 #   delete       删除括注（与同段脚注重复）
 #   to_footnote  新建脚注（fn_text 或 fn_segments）并在原位插引用标记，再删括注
+#   keep         保留括注（田野/访谈/内部资料等说明性标注，非文献引用，不转脚注）
 #   keep_flag    保留括注，仅在报告标记待复核（信息缺失或有疑点）
 # para 为 extract_structure.py 的段落索引（0 起）；cite 为精确括注字符串。
 INTEXT_ACTIONS = [
-    # —— 田野/访谈/资料类 → 转脚注 ——
-    {"para": 5,  "cite": "（20230615，田野笔记）",    "action": "to_footnote", "fn_text": "田野笔记，2023年6月15日。"},
-    {"para": 12, "cite": "（20231020，村民访谈资料）", "action": "to_footnote", "fn_text": "村民访谈资料，2023年10月20日。"},
+    # —— 田野/访谈/资料类 → 保留括注（说明性标注，非文献引用） ——
+    {"para": 5,  "cite": "（20230615，田野笔记）",    "action": "keep"},
+    {"para": 12, "cite": "（20231020，村民访谈资料）", "action": "keep"},
+    {"para": 18, "cite": "（20240301，内部调研备忘）", "action": "keep"},
 
     # —— 与同段脚注重复的 APA/学术括注 → 删除 ——
     {"para": 8,  "cite": "（张三，2020）",            "action": "delete"},
